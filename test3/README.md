@@ -20,8 +20,8 @@
 package "图书管理系统" {
 
 class admin{
-     +String adminID
-     +String password
+     -String adminID
+     -String password
 
      +addBook()
      +deleteBook()
@@ -31,8 +31,8 @@ class admin{
      +penalties()
  }
 class sysAdmin {
-   +String rootId
-   +String password
+   -String rootId
+   -String password
 
    +addUser()
    +deleteUser()
@@ -41,48 +41,53 @@ class sysAdmin {
    +statistic()
 }
 class Book {
-   +String number
-   +String name
-   +String authur
-   +String ISBN
-   +String publisher
-   +int price
-   +String status
-   +List<String> sort
+   -String number
+   -String name
+   -String authur
+   -String ISBN
+   -String publisher
+   -int price
+   -String status
+   -List<String> sort
+   
    +addBook()
    +deleteBook()
    +modifyBook()
    +seekBook()
 }
 class Book_token {
-  +String booknum
-  +String studentNo
-  +Data bookTime
+  -String booknum
+  -String studentNo
+  -Data bookTime
+  
   +add()
   +cancel()
   +query()
 }
 class Borrow {
-  +String booknum
-  +String studentNo
-  +Data time
+  -String booknum
+  -String studentNo
+  -Data time
+  
   +Data lastDate
   +borrowed()
   +update()
 }
 class returnBook {
-  +String booknum
-  +String studentNo
-  +Data returnDate
-  +Data penaltyInfo
+  -String booknum
+  -String studentNo
+  -Data returnDate
+  -Data penaltyInfo
+  
   +return()
   +update()
   +penalty()
 }
 class borrower {
-   +String studentNo
-   +String password
-   +String class
+   -String studentNo
+   -String password
+   -String class
+   
    +queryBook()
    +appointBook()
    +borrowBook()
